@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelogs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: #121212;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .terminal {
+            background-color: #000000;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            width: 600px;
+            max-width: 90%;
+            height: auto;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            overflow-y: auto;
+        }
+
+        .terminal .line {
+            margin: 5px 0;
+            white-space: pre-wrap;
+        }
+
+        .terminal .line:before {
+            content: "$ ";
+            color: #00ff00;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #555;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="line">[+] Added anti bang command</div>
+        <div class="line">[+] Added fly command</div>
+        <div class="line">[+] Added rejoin command</div>
+    </div>
+
+    <footer>
+        © 2024 Nimbus Admin Core. All rights reserved.
+    </footer>
+</body>
+</html>
