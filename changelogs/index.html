@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: #121212;
+            background: linear-gradient(135deg, #0f0f0f, #121212);
             color: #f5f5f5;
             display: flex;
             flex-direction: column;
@@ -27,25 +27,30 @@
             position: fixed;
             top: 20px;
             display: flex;
-            gap: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px 30px;
+            gap: 25px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 12px 35px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
             z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar:hover {
+            transform: scale(1.05);
         }
 
         .navbar a {
             text-decoration: none;
             color: #f5f5f5;
             font-weight: bold;
-            padding: 8px 12px;
-            border-radius: 8px;
+            padding: 10px 15px;
+            border-radius: 10px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .navbar a:hover {
-            background-color: #333;
+            background-color: #444;
             color: #ffffff;
         }
 
@@ -59,36 +64,46 @@
         .terminal {
             background-color: #1e1e1e;
             color: #f5f5f5;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             font-size: 1rem;
-            line-height: 1.4;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            line-height: 1.6;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
             white-space: pre-wrap;
             word-wrap: break-word;
             margin-bottom: 30px;
             font-family: 'Courier New', monospace;
             overflow-y: auto;
             max-height: 400px;
+            position: relative;
         }
 
         .terminal::before {
             content: "Nimbus Admin Core Changelog";
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: block;
-            color: #f5f5f5;
-            border-bottom: 2px solid #f5f5f5;
+            color: #00ff88;
+            border-bottom: 2px solid #00ff88;
             padding-bottom: 5px;
+        }
+
+        .terminal:hover {
+            border: 2px solid #00ff88;
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.8);
         }
 
         footer {
             margin-top: auto;
             padding: 10px;
             font-size: 0.8rem;
-            color: #555;
+            color: #666;
             text-align: center;
+        }
+
+        footer:hover {
+            color: #fff;
         }
     </style>
 </head>
