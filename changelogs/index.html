@@ -76,6 +76,11 @@
             overflow-y: auto;
             max-height: 400px;
             position: relative;
+            scrollbar-width: none; /* For Firefox */
+        }
+
+        .terminal::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Edge */
         }
 
         .terminal::before {
